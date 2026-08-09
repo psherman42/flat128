@@ -34,8 +34,9 @@ Tested: GCC on Windows (mingw64), Linux, RISC-V (SG2042 Milk-V Pioneer).
 No dependencies beyond the C standard library.
 
 ## Usage
-
+```
 Mult128 [<multiplier> <multiplicand> [<binpoint>]]
+```
 
 No args runs the self-test.
 
@@ -71,8 +72,11 @@ truncation expected and documented.
 ## The flat128 argument in one picture
 
 float32: [S][ exponent 8b ][ mantissa 23b ]
+
 float128: [S][ exponent 15b ][ mantissa 112b ]
+
 flat128: [ significand 128b ]
+
 ↕ binary point (compiler-managed)
 
 The exponent field purchases dynamic range at the cost of significand
@@ -95,8 +99,7 @@ extension is incremental.
 
 ## History
 
-- 20150209 pds  initial cut, 64-bit fixed-point multiplication (WDC kernel heritage)
-- 20260807 pds  128-bit extension, base 2^32 limbs, flat128 demo
+- 20260807 pds  initial cut, 128-bit extension, base 2^32 limbs, flat128 demo
 - 20260808 pds  (prod_t) cast on multiply inner loop, Windows LLP64 fix
 
 ## License
