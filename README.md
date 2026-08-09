@@ -44,26 +44,32 @@ No args runs the self-test.
 
 ### Self-test: (2^32 + 1)^2 = 2^64 + 2·2^32 + 1
 
+```
 Mult128
 m[]= 1 1 0 0
 n[]= 1 1 0 0
 s[]= 1 2 1 0 0 0 0 0
+```
 
 Verify by inspection: (x+1)^2 = x^2 + 2x + 1 with x = 2^32.
 Three non-zero limbs. Exact. No rounding.
 
 ### 2^32 × 2^32 = 2^64 — carry into limb 2
 
+```
 Mult128 4294967296 4294967296
 s[]= 0 0 1 0 0 0 0 0
+```
 
 ### Near-UINT64_MAX × 2 — carry propagation across limb boundary
 
+```
 Mult128 18446744073709551615 2
 m[]= 4294967295 4294967295 0 0
 n[]= 2 0 0 0
 s[]= 4294967294 4294967295 1 0 0 0 0 0
 value=18446744073709551614
+```
 
 (2^64 - 1) × 2 = 2^65 - 2. Limb 2 = 1 is the carry propagating
 visibly across the limb boundary. value= shows low 64 bits only —
@@ -71,13 +77,13 @@ truncation expected and documented.
 
 ## The flat128 argument in one picture
 
-float32: [S][ exponent 8b ][ mantissa 23b ]
-
-float128: [S][ exponent 15b ][ mantissa 112b ]
-
-flat128: [ significand 128b ]
-
-↕ binary point (compiler-managed)
+```
+float32:  [S][ exponent  8b ][      mantissa 23b      ]
+float128: [S][  exponent 15b ][          mantissa 112b          ]
+flat128:  [               significand 128b                      ]
+                                    ^
+                                    binary point (compiler-managed)
+```
 
 The exponent field purchases dynamic range at the cost of significand
 bits. flat128 eliminates it. ~38.5 decimal digits of uniform precision
