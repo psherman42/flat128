@@ -33,6 +33,36 @@ gcc -o Mult128 Mult128.c
 Tested: GCC on Windows (mingw64), Linux, RISC-V (SG2042 Milk-V Pioneer).
 No dependencies beyond the C standard library.
 
+## Experimental Validation
+
+`flatdot.c` demonstrates bitwise reproducibility of flat128 dot product
+accumulation vs IEEE 754 double on real RISC-V silicon.
+
+**Platform:** Milk-V Pioneer, SG2042, 64 THead C920 harts, 4 NUMA nodes,
+128GB DDR4, Fedora kernel 6.1.37
+
+**Build:**
+```bash
+gcc -O2 -o flatdot flatdot.c -lpthread
+```
+
+**Run:**
+```bash
+./flatdot <K> <nthreads>   # K=elements, nthreads=1..64
+```
+
+**Results (1 thread vs 64 threads, all 4 NUMA nodes):**
+
+| K    | flat128 hex               | IEEE 754 double delta |
+|------|---------------------------|-----------------------|
+| 64   | `002b4c60`                | 0                     |
+| 256  | `0a33d180`                | ~2.7e+14              |
+| 1024 | `00000002 83394600`       | ~7e+15                |
+| 4096 | `000000a0 33851800`       | ~4.5e+17              |
+
+flat128 hex is identical across all thread counts and NUMA nodes.
+IEEE 754 double diverges monotonically with K.
+
 ## Usage
 ```
 Mult128 [<multiplier> <multiplicand> [<binpoint>]]
@@ -107,6 +137,7 @@ extension is incremental.
 
 - 20260807 pds  initial cut, 128-bit extension, base 2^32 limbs, flat128 demo
 - 20260808 pds  (prod_t) cast on multiply inner loop, Windows LLP64 fix
+- 20260814 pds  flatdot.c: bitwise reproducibility test, Pioneer silicon results
 
 ## License
 
