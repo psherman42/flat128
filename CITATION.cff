@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "Depth or Breadth? Flat128 Arithmetic and the RV128 Opportunity"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Sherman
+    given-names: Paul Dylan
+    orcid: "https://orcid.org/0009-0000-3001-8285"
+    affiliation: "RISC-V International"
+  - family-names: Keville
+    given-names: Kurt
+    affiliation: "MIT / Posit Foundation"
+repository-code: "https://github.com/psherman42/flat128"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-08"
+keywords:
+  - RISC-V
+  - fixed-point arithmetic
+  - reproducible computing
+  - flat128
+  - SV128
+  - posit arithmetic
+  - HPC

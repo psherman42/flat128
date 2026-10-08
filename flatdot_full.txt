@@ -1,0 +1,144 @@
+K=64 T=1: flatdot: K=64 nthreads=1
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 002b4c60
+double  result: 2.02925990765772775547e+25
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=64 T=4: flatdot: K=64 nthreads=4
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 002b4c60
+double  result: 2.02925990765772775547e+25
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=64 T=16: flatdot: K=64 nthreads=16
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 002b4c60
+double  result: 2.02925990765772775547e+25
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=64 T=64: flatdot: K=64 nthreads=64
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 002b4c60
+double  result: 2.02925990765772775547e+25
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=256 T=1: flatdot: K=256 nthreads=1
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 0a33d180
+double  result: 1.25307286292189771657e+27
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=256 T=4: flatdot: K=256 nthreads=4
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 0a33d180
+double  result: 1.25307286292189854120e+27
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=256 T=16: flatdot: K=256 nthreads=16
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 0a33d180
+double  result: 1.25307286292189826632e+27
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=256 T=64: flatdot: K=256 nthreads=64
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000000 0a33d180
+double  result: 1.25307286292189744169e+27
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=1024 T=1: flatdot: K=1024 nthreads=1
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000002 83394600
+double  result: 7.94700326961878491045e+28
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=1024 T=4: flatdot: K=1024 nthreads=4
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000002 83394600
+double  result: 7.94700326961877787357e+28
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=1024 T=16: flatdot: K=1024 nthreads=16
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000002 83394600
+double  result: 7.94700326961877611435e+28
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=1024 T=64: flatdot: K=1024 nthreads=64
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 00000002 83394600
+double  result: 7.94700326961877787357e+28
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=4096 T=1: flatdot: K=4096 nthreads=1
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 000000a0 33851800
+double  result: 5.07447130453039818672e+30
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=4096 T=4: flatdot: K=4096 nthreads=4
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 000000a0 33851800
+double  result: 5.07447130453040269032e+30
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=4096 T=16: flatdot: K=4096 nthreads=16
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 000000a0 33851800
+double  result: 5.07447130453040156442e+30
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
+K=4096 T=64: flatdot: K=4096 nthreads=64
+Platform: SG2042 Pioneer LKG b289 / Fedora
+
+flat128 result: 00000000 00000000 000000a0 33851800
+double  result: 5.07447130453040269032e+30
+
+flat128 hex should be IDENTICAL across all runs,
+thread counts, and NUMA nodes on Pioneer.
+double  hex will diverge under thread reordering.
