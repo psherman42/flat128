@@ -34,6 +34,7 @@ Quinlan, J., Omtzigt, E.T.L.: Iterative refinement with low-precision posit
 
 \bibitem{sherman2026mult128}
 Sherman, P., Keville, K.: {Mult128.c}: Portable 128-bit multiply for {RISC-V}
-  (2026), \url{https://github.com/psherman42/flat128}
+  (2026). \doi{10.5281/zenodo.23246819},
+  \url{https://github.com/psherman42/flat128}
 
 \end{thebibliography}
