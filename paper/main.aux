@@ -1,0 +1,70 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\@writefile{toc}{\contentsline {title}{Depth or Breadth? Flat128 Arithmetic and the RV128 Opportunity}{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\authcount {2}}
+\@writefile{toc}{\contentsline {author}{Paul Sherman \orcidlinkX  {}{0009-0000-3001-8285}{} \and Kurt Keville \orcidlinkX  {}{0000-0003-0194-951X}{}}{1}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\citation{ieee2019standard}
+\citation{gustafson2017beating,gustafson2017end}
+\citation{sherman2026mult128}
+\citation{posits-standard-2022}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}The Segment Register Analogy}{2}{subsection.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Bit allocation in float32, float128, and flat128. The exponent field purchases dynamic range at the cost of significand bits. Flat128 eliminates the exponent entirely; the binary point is compiler-managed metadata, not architectural state.}}{3}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:bitalloc}{{1}{3}{Bit allocation in float32, float128, and flat128. The exponent field purchases dynamic range at the cost of significand bits. Flat128 eliminates the exponent entirely; the binary point is compiler-managed metadata, not architectural state}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Context: Gustafson and Posit Arithmetic}{3}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Flat128 Design}{3}{section.2}\protected@file@percent }
+\newlabel{sec:design}{{2}{3}{Flat128 Design}{section.2}{}}
+\citation{sherman2026mult128}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}The Coalescence Point: Flat128 and the Quire}{4}{subsection.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Proposed pipeline division of labor. Posit8/16 concentrates precision where activation distributions are dense. Flat128 accumulates exact 256-bit intermediate products at the wide stage. Parameters are stored at uniform flat128 precision. All three stages share one principle: round once, explicitly, at a defined boundary, and never invisibly inside an operation.}}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:pipeline}{{2}{4}{Proposed pipeline division of labor. Posit8/16 concentrates precision where activation distributions are dense. Flat128 accumulates exact 256-bit intermediate products at the wide stage. Parameters are stored at uniform flat128 precision. All three stages share one principle: round once, explicitly, at a defined boundary, and never invisibly inside an operation}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Encoding vs. Accumulation}{4}{subsection.2.2}\protected@file@percent }
+\citation{quinlan2024iterative}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces $128\times 128$-bit multiplication as sixteen $32\times 32$ partial products --- long multiplication scaled to 128-bit limbs. Each $A_i B_j$ term maps to one \texttt  {MUL} in base RV64I\spacefactor \@m {}; rows shift left by 32 bits per $B$ limb index. The 256-bit result $P_0$--$P_7$ is exact with no intermediate rounding.}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:partial}{{3}{5}{$128\times 128$-bit multiplication as sixteen $32\times 32$ partial products --- long multiplication scaled to 128-bit limbs. Each $A_i B_j$ term maps to one \texttt {MUL} in base RV64I\@; rows shift left by 32 bits per $B$ limb index. The 256-bit result $P_0$--$P_7$ is exact with no intermediate rounding}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methods}{5}{section.3}\protected@file@percent }
+\newlabel{sec:methods}{{3}{5}{Methods}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Division of Labor: Experimental Hypothesis}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Reproducibility Argument}{5}{subsection.3.2}\protected@file@percent }
+\citation{omtzigt2023universal}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Proposed division of labor by pipeline stage (hypothesis only).}}{6}{table.caption.5}\protected@file@percent }
+\newlabel{tab:division}{{1}{6}{Proposed division of labor by pipeline stage (hypothesis only)}{table.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Experimental Setup}{6}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}ISA Encoding Sketch}{6}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Register File Architecture}{7}{subsection.3.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Register file alternatives for flat128.}}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:regfile}{{2}{7}{Register file alternatives for flat128}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Binary Point and Arithmetic Contract}{7}{subsection.3.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Open binary point and arithmetic contract questions.}}{8}{table.caption.7}\protected@file@percent }
+\newlabel{tab:binarypoint}{{3}{8}{Open binary point and arithmetic contract questions}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{8}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{8}{Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Flat128 Reproducibility}{8}{subsection.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Flat128 vs.\ IEEE~754 double-precision dot product accumulation on SG2042 Pioneer. Flat128 hex result (most significant limb) is bitwise identical across all runs; double relative error is $(\max - \min )/\min $ across thread counts $T \in \{1,4,16,64\}$.}}{8}{table.caption.8}\protected@file@percent }
+\newlabel{tab:results}{{4}{8}{Flat128 vs.\ IEEE~754 double-precision dot product accumulation on SG2042 Pioneer. Flat128 hex result (most significant limb) is bitwise identical across all runs; double relative error is $(\max - \min )/\min $ across thread counts $T \in \{1,4,16,64\}$}{table.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Relative divergence $(\max -\min )/\min $ of IEEE~754 double-precision dot product across $T \in \{1,4,16,64\}$ threads on SG2042 Pioneer. Flat128 divergence is identically zero at all $K$.}}{9}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:divergence}{{4}{9}{Relative divergence $(\max -\min )/\min $ of IEEE~754 double-precision dot product across $T \in \{1,4,16,64\}$ threads on SG2042 Pioneer. Flat128 divergence is identically zero at all $K$}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}NUMA Locality}{9}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces NUMA locality test: $K=4096$, $T=16$, pinned per node. Flat128 hex and double result are identical across all four NUMA nodes.}}{9}{table.caption.10}\protected@file@percent }
+\newlabel{tab:numa}{{5}{9}{NUMA locality test: $K=4096$, $T=16$, pinned per node. Flat128 hex and double result are identical across all four NUMA nodes}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Performance}{9}{subsection.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{10}{section.5}\protected@file@percent }
+\newlabel{sec:conclusions}{{5}{10}{Conclusions}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}The Deployment Axis}{10}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}The Maintainer-Friendly Argument}{10}{subsection.5.2}\protected@file@percent }
+\bibstyle{splncs04}
+\bibdata{references}
+\bibcite{gustafson2017end}{1}
+\bibcite{posits-standard-2022}{2}
+\bibcite{gustafson2017beating}{3}
+\bibcite{ieee2019standard}{4}
+\bibcite{omtzigt2023universal}{5}
+\bibcite{quinlan2024iterative}{6}
+\bibcite{sherman2026mult128}{7}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Open Questions}{11}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}The Place of Contention}{11}{subsection.5.4}\protected@file@percent }
+\gdef \@abspage@last{11}

@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{gustafson2017end}
+Gustafson, J.L.: The end of error: Unum computing. Chapman and Hall/CRC (2017)
+
+\bibitem{posits-standard-2022}
+Gustafson, J.L., Bohlender, G., Chung, S.Y., Dimitrov, V., Jones, G., Leong,
+  S.H., Lindstrom, P., Omtzigt, T., Rehr, H., Shewmaker, A., Yonemoto, I.:
+  Standard for {Posit} arithmetic (Mar 2022), standard document;
+  \url{https://posithub.org/docs/posit_standard-2.pdf}
+
+\bibitem{gustafson2017beating}
+Gustafson, J.L., Yonemoto, I.T.: Beating floating point at its own game: Posit
+  arithmetic. Supercomputing Frontiers and Innovations  \textbf{4}(2),  71--86
+  (2017)
+
+\bibitem{ieee2019standard}
+{IEEE}: {IEEE} standard for floating-point arithmetic. {IEEE} Std 754-2019
+  (Revision of {IEEE} 754-2008) pp. 1--84 (2019).
+  \doi{10.1109/ieeestd.2019.8766229}
+
+\bibitem{omtzigt2023universal}
+Omtzigt, E.T.L., Quinlan, J.: Universal numbers library: Multi-format variable
+  precision arithmetic library. Journal of Open Source Software
+  \textbf{8}(83), ~5072 (2023)
+
+\bibitem{quinlan2024iterative}
+Quinlan, J., Omtzigt, E.T.L.: Iterative refinement with low-precision posit
+  arithmetic. In: Conference on Next Generation Arithmetic. pp. 74--90.
+  Springer (2024)
+
+\bibitem{sherman2026mult128}
+Sherman, P., Keville, K.: {Mult128.c}: Portable 128-bit multiply for {RISC-V}
+  (2026), \url{https://github.com/psherman42/flat128}
+
+\end{thebibliography}
